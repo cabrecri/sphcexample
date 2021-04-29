@@ -26,6 +26,10 @@ import net.guides.springboot2.crud.repository.EmployeeRepository;
 public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
+	@GetMapping("/demo")
+	public String demo() {
+		return "hello world";
+	}
 
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees() {
